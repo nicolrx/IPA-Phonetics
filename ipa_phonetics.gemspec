@@ -4,7 +4,7 @@ require "ipa_phonetics/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "ipa_phonetics"
-  spec.version       = "0.1.7"
+  spec.version       = "0.2.0"
   spec.authors       = ["nico_lrx"]
   spec.email         = ["nicolas.leroux@sciencespo.fr"]
 
@@ -31,6 +31,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 2.0"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rake", ">= 12.3.3"
   spec.add_development_dependency "json"
 end
