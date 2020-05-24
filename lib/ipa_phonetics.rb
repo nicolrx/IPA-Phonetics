@@ -1,15 +1,12 @@
 require "ipa_phonetics/version"
 require "ipa_phonetics/special_chars"
 
-
 module IpaPhonetics
   class Error < StandardError; end
 	
 	require "json"
 	require "timeout"
 
-	ROOT = File.expand_path("../..", __FILE__)
-	eval(File.read("#{ROOT}/lib/special_chars.rb"))
 	@timeout = 1
 
 	def parseCSV(path)
