@@ -9,12 +9,14 @@ module IpaPhonetics
 
 	@timeout = 1
 
+	ROOT = File.expand_path("../..", __FILE__)
+	
 	def IpaPhonetics.parseCSV(path)
-		Hash[File.open("../data/#{path}.csv").read.split("\n").map {|ligne| ligne.split("#")}]
+		Hash[File.open("#{ROOT}/data/#{path}.csv").read.split("\n").map {|ligne| ligne.split("#")}]
 	end
 
 	def IpaPhonetics.exceptions
-		@exceptions ||= JSON.parse(File.read("../data/dict.json"))
+		@exceptions ||= JSON.parse(File.read("#{ROOT}/data/dict.json"))
 	end
 
 	def IpaPhonetics.conversion
