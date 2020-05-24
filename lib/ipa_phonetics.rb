@@ -9,7 +9,7 @@ module IpaPhonetics
 
 	@timeout = 1
 
-	ROOT = File.expand_path('../', File.dirname(__FILE__)
+	ROOT = File.expand_path('../', File.dirname(__FILE__))
 
 	def IpaPhonetics.parseCSV(path)
 		Hash[File.open("#{ROOT}/data/#{path}.csv").read.split("\n").map {|ligne| ligne.split("#")}]

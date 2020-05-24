@@ -4,7 +4,7 @@ require "ipa_phonetics/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "ipa_phonetics"
-  spec.version       = "0.1.6"
+  spec.version       = "0.1.7"
   spec.authors       = ["nico_lrx"]
   spec.email         = ["nicolas.leroux@sciencespo.fr"]
 
