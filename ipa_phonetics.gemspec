@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["nico_lrx"]
   spec.email         = ["nicolas.leroux@sciencespo.fr"]
 
-  spec.summary       = "API Phonetics"
+  spec.summary       = "IPA Phonetics"
   spec.description   = "French to IPA (International Phonetic Alphabet) Translator"
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/nicolrx/IPA-Phonetics"
   spec.license       = "MIT"
 	
 	# Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
