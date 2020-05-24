@@ -9,27 +9,27 @@ module IpaPhonetics
 
 	@timeout = 1
 
-	def parseCSV(path)
+	def self.parseCSV(path)
 		Hash[File.open("#{ROOT}/data/#{path}.csv").read.split("\n").map {|ligne| ligne.split("#")}]
 	end
 
-	def exceptions
+	def self.exceptions
 		@exceptions ||= JSON.parse(File.read("#{ROOT}/data/dict.json"))
 	end
 
-	def conversion
+	def self.conversion
 		@conversion ||= parseCSV "conversion"
 	end
 
-	def set_timeout(seconds)
+	def self.set_timeout(seconds)
 		@timeout = seconds
 	end
 	
-	def timeout
+	def self.timeout
 		@timeout
 	end
 
-	def get(text)
+	def self.get(text)
 		text = text.downcase
 		text.gsub(SPE, "").split.map do |word|
 			exceptions[word] || "".tap do |result|
